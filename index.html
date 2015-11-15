@@ -46,16 +46,16 @@ You can also use your own favico or Hackathon logo/header.
           <th class="number">Table</th>
           <th class="name">Project</th>
           <th class="prize">Sponsor Prizes</th>
-          <th class="cat">Category</th> <!--You can comment out this column if you dont need it-->
+          <th class="cat">Category</th>
         </tr>
       </thead>
       <tbody class="list">
         {{#data}}
           <tr>
-            <td class="number">E{{expo}} T{{table}}</td>
+            <td class="number">T{{table}}</td>
             <td class="name"><a href="{{{link}}}" target="_blank">{{project}}</a></td>
             <td class="prize">{{sponsors}}</td>
-            <td class="cat">{{category}}</td> <!--You can comment out this column if you dont need it-->
+            <td class="cat">{{category}}</td>
           </tr>
         {{/data}}
       </tbody>
@@ -89,7 +89,7 @@ You can also use your own favico or Hackathon logo/header.
 
       // CSV format: https://gist.githubusercontent.com/nealrs/510b6ab766d97b42f572/raw/92188f386410fe9ebdfdea381562a4ddff4a02b7/test.csv
 
-      Papa.parse("data/data.csv", {
+      Papa.parse("data/submission-info.csv", {
         download: true,
         header: true,
         complete: function(results) {
